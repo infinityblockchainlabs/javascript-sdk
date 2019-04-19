@@ -265,7 +265,7 @@ export const getPrivateKeyFromMnemonic = (mnemonic, derive = true) => {
   if(!bip39.validateMnemonic(mnemonic)){
     throw new Error("wrong mnemonic format")
   }
-  const seed = bip39.mnemonicToSeedSync(mnemonic)
+  const seed = bip39.mnemonicToSeed(mnemonic)
   if (derive) {
     const master = bip32.fromSeed(seed)
     const child = master.derivePath(HDPATH)
