@@ -76,7 +76,7 @@ class Transaction {
       "memo": this.memo,
       "msgs": [msg],
       "sequence": this.sequence.toString(),
-      "source": "1"
+      "source": "11"
     }
     return encoder.convertObjectToSignBytes(signMsg)
   }
@@ -127,7 +127,7 @@ class Transaction {
       msg: [msg],
       signatures: this.signatures,
       memo: this.memo,
-      source: 1, // web wallet value is 1
+      source: 11, // infinito wallet value is 11
       data: "",
       msgType: txType.StdTx
     }
